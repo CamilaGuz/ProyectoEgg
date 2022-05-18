@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>[Ke Sale?] - Registro</title>
+        <title>[Que Sale?] - Registro</title>
         <!-- Mobile Specific Metas -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <!-- Font-->
@@ -21,6 +21,7 @@
                     <p class="text-1">Registro</p>
                     <p class="text-2">Términos y condiciones</p>
                 </div>
+                
                 <form class="form-detail" th:action="@{/usuario/form}" method="POST" id="myform">
                     <div class="form-row">
                         <label for="nombre">Nombre de usuario</label>
@@ -47,6 +48,7 @@
                     <div th:if="${error != null}" th:text="${error}" class="alert alert-danger" role="alert" id="alert">
                     </div>
                 </form>
+                
             </div>
         </div>    
         <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>

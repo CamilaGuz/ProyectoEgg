@@ -32,7 +32,8 @@ public class UsuarioControlador {
     public String crear(ModelMap modelo, @RequestParam String nombre, @RequestParam String mail, @RequestParam String contrasenia, @RequestParam String contrasenia1) {
         try {
             usuarioServicio.crear(nombre, mail, contrasenia, contrasenia1, null);
-            modelo.put("exito", "Se cargó exitosamente");
+
+            System.out.println("[Creado Usuario "+nombre+" ]");
         } catch (Exception e) {
             modelo.put("error", e.getMessage());
             modelo.put("nombre", nombre);

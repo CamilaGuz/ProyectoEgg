@@ -44,9 +44,9 @@ public class UsuarioServicio implements UserDetailsService {
         usuario.setRol(Rol.USUARIO);
         Imagen imagen = imagenServicio.guardar(archivo);
         usuario.setImagen(imagen);
-
+        
         return usuarioRepositorio.save(usuario);
-
+        
     }
 
     @Transactional(readOnly = true)
